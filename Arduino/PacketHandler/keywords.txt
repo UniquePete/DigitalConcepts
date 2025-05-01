@@ -1,0 +1,173 @@
+#######################################
+# Syntax Coloring Map For Langlo LoRa PacketHandler
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+PacketHandler	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+softwareRevision	KEYWORD2
+init	KEYWORD2
+begin	KEYWORD2
+setNodeAttributes	KEYWORD2
+heartbeatInterval	KEYWORD2
+healthCheckInterval	KEYWORD2
+incrementNodeTimers	KEYWORD2
+nodeHealthCheck	KEYWORD2
+
+packetSize	KEYWORD2
+headerSize	KEYWORD2
+headerByteCount	KEYWORD2
+
+destinationMAC	KEYWORD2
+sourceMAC	KEYWORD2
+checksum	KEYWORD2
+sequenceNumber	KEYWORD2
+packetType	KEYWORD2
+packetTypeDescription	KEYWORD2
+relFlag	KEYWORD2
+ackFlag	KEYWORD2
+byteCount	KEYWORD2
+byte	KEYWORD2
+byteStream	KEYWORD2
+payloadByteCount	KEYWORD2
+packetByteCount	KEYWORD2
+
+voltage	KEYWORD2
+
+batteryVoltage	KEYWORD2
+batteryCurrent	KEYWORD2
+panelVoltage	KEYWORD2
+panelCurrent	KEYWORD2
+loadVoltage	KEYWORD2
+loadCurrent(	KEYWORD2
+
+tankId	KEYWORD2
+tankLevel	KEYWORD2
+
+pumpId	KEYWORD2
+pumpState	KEYWORD2
+
+flowRate	KEYWORD2
+flowVolume	KEYWORD2
+
+temperature	KEYWORD2
+pressure	KEYWORD2
+humidity	KEYWORD2
+rainfall	KEYWORD2
+windBearing	KEYWORD2
+windSpeed	KEYWORD2
+
+voxLevel	KEYWORD2
+
+ambientLight	KEYWORD2
+
+uvA	KEYWORD2
+uvB	KEYWORD2
+uvIndex	KEYWORD2
+
+latitude	KEYWORD2
+longitude	KEYWORD2
+altitude	KEYWORD2
+hdop	KEYWORD2
+
+blowerPressure	KEYWORD2
+itLevel	KEYWORD2
+
+resetCode	KEYWORD2
+
+erasePacketHeader	KEYWORD2
+
+setDestinationMAC	KEYWORD2
+setSourceMAC	KEYWORD2
+setSequenceNumber	KEYWORD2
+setPacketType	KEYWORD2
+setRelFlag	KEYWORD2
+setAckFlag	KEYWORD2
+setByte	KEYWORD2
+setContent	KEYWORD2
+
+setVoltage	KEYWORD2
+
+setBatteryVoltage	KEYWORD2
+setBatteryCurrent	KEYWORD2
+setPanelVoltage	KEYWORD2
+setPanelCurrent	KEYWORD2
+setLoadVoltage	KEYWORD2
+setLoadCurrent	KEYWORD2
+
+setTankId	KEYWORD2
+setTankLevel	KEYWORD2
+
+setFlowRate	KEYWORD2
+setFlowVolume	KEYWORD2
+
+setTemperature	KEYWORD2
+setPressure	KEYWORD2
+setHumidity	KEYWORD2
+setRainfall	KEYWORD2
+setWindBearing	KEYWORD2
+setWindSpeed	KEYWORD2
+
+setVoxLevel	KEYWORD2
+
+setAmbientLight	KEYWORD2
+
+setUvA	KEYWORD2
+setUvB	KEYWORD2
+setUvIndex	KEYWORD2
+
+setLatitude	KEYWORD2
+setLongitude	KEYWORD2
+setAltitude	KEYWORD2
+setHdop	KEYWORD2
+
+setBlowerPressure	KEYWORD2
+setItLevel	KEYWORD2
+
+setResetCode	KEYWORD2
+
+generatePayloadChecksum	KEYWORD2
+verifyPayloadChecksum	KEYWORD2
+
+hexDump	KEYWORD2
+serialOut	KEYWORD2
+displayOut	KEYWORD2
+mqttOut	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+PACKET_HANDLER	LITERAL1
+NODE_HANDLER	LITERAL1
+
+VOLTAGE	LITERAL1
+POWER	LITERAL1
+TANK	LITERAL1
+PUMP	LITERAL1
+WEATHER	LITERAL1
+ATMOSPHERE	LITERAL1
+TEMPERATURE	LITERAL1
+RAINFALL	LITERAL1
+WIND	LITERAL1
+VOX	LITERAL1
+LIGHT	LITERAL1
+UV	LITERAL1
+SPRINKLER	LITERAL1
+GPS	LITERAL1
+AWTS	LITERAL1
+DEFAULT_TYPE	LITERAL1
+FLOW	LITERAL1
+NUM_TYPES	LITERAL1
+
+PH_POWER_OFF	LITERAL1
+PH_POWER_ON	LITERAL1
+PH_POWER_UNDEFINED	LITERAL1
+NUM_STATUS	LITERAL1

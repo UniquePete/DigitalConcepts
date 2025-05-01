@@ -1,0 +1,22 @@
+{
+  "name": "PacketHandler",
+  "keywords": "LoRa, data, packet",
+  "description": "Arduino Library for data packet management",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/uniquepete/digitalconcepts"
+  },
+  "authors": 
+  [
+    {
+      "name": "Peter Harrison",
+      "email": "pete@digitalconcepts.net.au",
+      "url": "http://www.digitalconcepts.net.au",
+      "maintainer": true
+    },
+  ],
+  "version": "0.0.17",
+  "frameworks": "arduino",
+  "platforms": "*"
+}

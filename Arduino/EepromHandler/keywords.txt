@@ -1,0 +1,56 @@
+#######################################
+# Syntax Coloring Map For Langlo EepromHandler
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+EepromHandler	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+softwareRevision	KEYWORD2
+init	KEYWORD2
+begin	KEYWORD2
+
+setI2CBus	KEYWORD2
+setI2CAddress	KEYWORD2
+initSmartSerial()	KEYWORD2
+getSmartSerial()	KEYWORD2
+getDebug()	KEYWORD2
+
+getParameterByteCount	KEYWORD2
+getParameterLocation	KEYWORD2
+    
+write	KEYWORD2
+writeUint32	KEYWORD2 
+writeUint16	KEYWORD2
+writeUint8	KEYWORD2
+writeBytes	KEYWORD2  
+        
+read	KEYWORD2
+readUint32	KEYWORD2
+readUint16	KEYWORD2
+readUint8	KEYWORD2
+readBytes	KEYWORD2
+    
+dump	KEYWORD2
+scrub	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+EH_GATEWAY_MAC	LITERAL1
+EH_NODE_MAC	LITERAL1
+EH_DESCRIPTOR	LITERAL1
+EH_SEQUENCE	LITERAL1
+EH_RAINFALL	LITERAL1
+EH_TANKID	LITERAL1
+EH_PUMPID	LITERAL1
+EH_NUM_TYPES	LITERAL1
+
+EH_MAX_BYTE_COUNT	LITERAL1

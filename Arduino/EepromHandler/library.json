@@ -1,0 +1,22 @@
+{
+  "name": "EepromHandler",
+  "keywords": "EEPROM",
+  "description": "Arduino Library for structured EEPROM management",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/uniquepete/digitalconcepts"
+  },
+  "authors": 
+  [
+    {
+      "name": "Peter Harrison",
+      "email": "pete@digitalconcepts.net.au",
+      "url": "http://www.digitalconcepts.net.au",
+      "maintainer": true
+    },
+  ],
+  "version": "0.0.14",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
