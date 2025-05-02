@@ -11,8 +11,8 @@ Credit where credit is due...
 
 ## Website
 
-You can find the latest version of the library at
-https://www.digitalconcepts.net.au/arduino/index.php?op=phdownloads
+You can find a full description of this library and its usage at
+https://www.digitalconcepts.net.au/arduino/index.php?op=PacketHandler
 
 # License
 
