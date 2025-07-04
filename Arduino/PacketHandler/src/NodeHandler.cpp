@@ -1,6 +1,6 @@
 /*
     NodeHandler.h - Langlo Node parameters
-    Version 0.0.6	05/09/2024
+    Version 0.0.7	23/05/2025
 
     0.0.1 Initial release
     0.0.2 Unspecified updates
@@ -8,9 +8,10 @@
     0.0.4 Add [(]NodeMCU] Flow Node details
     0.0.5 Add init() with parameters
     0.0.6 Change Node name 'message' when running on Pro Mini
+    0.0.7 Add CubeCells 5 and 6 to the Node list
 
     Digital Concepts
-    05 Sep 2024
+    23 May 2025
     digitalconcepts.net.au
 
     This is effectively a hosts file, tying host MAC addresses to relevant Node parameters.

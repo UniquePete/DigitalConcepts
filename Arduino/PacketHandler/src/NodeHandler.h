@@ -1,6 +1,6 @@
 /*
     NodeHandler.h - Langlo Node parameters
-    Version 0.0.6	05/09/2024
+    Version 0.0.7	23/05/2025
 
     0.0.1 Initial release
     0.0.2 Unspecified updates
@@ -8,9 +8,10 @@
     0.0.4 Add [(]NodeMCU] Flow Node details
     0.0.5 Add init() with parameters
     0.0.6 Change Node name 'message' when running on Pro Mini
+    0.0.7 Add CubeCells 5 and 6 to the Node list
 
     Digital Concepts
-    05 Sep 2024
+    23 May 2025
     digitalconcepts.net.au
 
     This is effectively a hosts file, tying host MAC addresses to relevant Node parameters.
@@ -102,7 +103,7 @@ timer reset values set to zero.
 #if defined(__AVR_ATmega328P__)
 	static const uint8_t NH_nodeCount = 1; // For the Pro Mini, just itself
 #else
-	static const uint8_t NH_nodeCount = 49; // The number of Nodes in the following list
+	static const uint8_t NH_nodeCount = 51; // The number of Nodes in the following list
 #endif
 
 /*
@@ -140,32 +141,34 @@ constrained—only 2K bytes for variables. We need to keep globals usage down to
 		{ 0xDC531410, 0, 0, "CubeCell Two"        		,	"cubecell2"     },	// 21
 		{ 0xDC632207, 0, 0, "CubeCell Three"        	,	"cubecell3"     },	// 22
 		{ 0xDC772E37, 0, 0, "CubeCell Four"        	  ,	"cubecell4"     },	// 23
-		{ 0xDC296D39, 0, 0, "ESP12S"         			    ,	"esp12s"       	},	// 24
-		{ 0xDCB600EA, 0, 0, "ESP12F1"        			    ,	"esp12F1"      	},	// 25
-		{ 0xDCB61052, 0, 0, "ESP12F2"        			    ,	"esp12F2"      	},	// 26
-		{ 0xDC2EDF35, 0, 0, "ESP12F3"        			    ,	"esp12F3"      	},	// 27
-		{ 0xDC2EE2F7, 0, 0, "ESP12F4"         	      ,	"esp12F4"      	},	// 28
-		{ 0xDC29D4DE, 0, 0, "ESP12F5"                 , "esp12F5"       },  // 29
-		{ 0xDC2B5D56, 0, 0, "ESP12F6"                 , "esp12F6"       },  // 30
-		{ 0xDCA541E3, 0, 0, "Node21"         			    ,	"node21"       	},	// 31
-		{ 0xDCB00002, 0, 0, "Node22"         			    ,	"node22"       	},	// 32
-		{ 0xDC120F38, 0, 0, "Node23"         			    ,	"node23"       	},	// 33
-		{ 0xDCB5A14B, 0, 0, "Node24"         			    ,	"node24"       	},	// 34
-		{ 0xDC8DBAAC, 0, 0, "NodeMCU Flow Sensor"    	,	"flownode"      },	// 35
-		{ 0xDC6A5728, 0, 0, "ESP32 W1"        			  ,	"esp32w1"      	},	// 36
-		{ 0xDC6A56EC, 0, 0, "ESP32 W2"        			  ,	"esp32w2"      	},	// 37
-		{ 0xDC48870C, 0, 0, "ESP32 W3"        			  ,	"esp32w3"      	},	// 38
-		{ 0xDC488D6C, 0, 0, "ESP32 W4"        			  ,	"esp32w4"      	},	// 39
-		{ 0xDC488710, 0, 0, "ESP32 W5"         			  ,	"esp32w5"     	},	// 40
-		{ 0xDC4886E8, 0, 0, "Node36"         			    ,	"node36"       	},	// 41
-		{ 0xDC4886F4, 0, 0, "Node37"         			    ,	"node37"       	},	// 42
-		{ 0xDCA7290F, 0, 0, "CubeCell Plus Pump"    	,	"cellpluspump"  },	// 43
-		{ 0xDCB32836, 0, 0, "Weather Station"  			  ,	"solarcellplus"	},	// 44
-		{ 0xDCB32A0B, 0, 0, "AWTS"  					        ,	"thirdcellplus"	},	// 45
-		{ 0xDC77172A, 0, 0, "Tank 1"  					      ,	"tankplus1"	    },	// 46
-		{ 0xDC770630, 0, 0, "CubeCell Plus Five"  	  ,	"cellplus5"   	},	// 47
+		{ 0xDC772E41, 0, 0, "CubeCell Five"        	  ,	"cubecell5"     },	// 24
+		{ 0xDC77330F, 0, 0, "CubeCell Six"        	  ,	"cubecell6"     },	// 25
+		{ 0xDC296D39, 0, 0, "ESP12S"         			    ,	"esp12s"       	},	// 26
+		{ 0xDCB600EA, 0, 0, "ESP12F1"        			    ,	"esp12F1"      	},	// 27
+		{ 0xDCB61052, 0, 0, "ESP12F2"        			    ,	"esp12F2"      	},	// 28
+		{ 0xDC2EDF35, 0, 0, "ESP12F3"        			    ,	"esp12F3"      	},	// 29
+		{ 0xDC2EE2F7, 0, 0, "ESP12F4"         	      ,	"esp12F4"      	},	// 30
+		{ 0xDC29D4DE, 0, 0, "ESP12F5"                 , "esp12F5"       },  // 31
+		{ 0xDC2B5D56, 0, 0, "ESP12F6"                 , "esp12F6"       },  // 32
+		{ 0xDCA541E3, 0, 0, "Node21"         			    ,	"node21"       	},	// 33
+		{ 0xDCB00002, 0, 0, "Node22"         			    ,	"node22"       	},	// 34
+		{ 0xDC120F38, 0, 0, "Node23"         			    ,	"node23"       	},	// 35
+		{ 0xDCB5A14B, 0, 0, "Node24"         			    ,	"node24"       	},	// 36
+		{ 0xDC8DBAAC, 0, 0, "NodeMCU Flow Sensor"    	,	"flownode"      },	// 37
+		{ 0xDC6A5728, 0, 0, "ESP32 W1"        			  ,	"esp32w1"      	},	// 38
+		{ 0xDC6A56EC, 0, 0, "ESP32 W2"        			  ,	"esp32w2"      	},	// 39
+		{ 0xDC48870C, 0, 0, "ESP32 W3"        			  ,	"esp32w3"      	},	// 40
+		{ 0xDC488D6C, 0, 0, "ESP32 W4"        			  ,	"esp32w4"      	},	// 41
+		{ 0xDC488710, 0, 0, "ESP32 W5"         			  ,	"esp32w5"     	},	// 42
+		{ 0xDC4886E8, 0, 0, "Node36"         			    ,	"node36"       	},	// 43
+		{ 0xDC4886F4, 0, 0, "Node37"         			    ,	"node37"       	},	// 44
+		{ 0xDCA7290F, 0, 0, "CubeCell Plus Pump"    	,	"cellpluspump"  },	// 45
+		{ 0xDCB32836, 0, 0, "Weather Station"  			  ,	"solarcellplus"	},	// 46
+		{ 0xDCB32A0B, 0, 0, "AWTS"  					        ,	"thirdcellplus"	},	// 47
+		{ 0xDC77172A, 0, 0, "Tank 1"  					      ,	"tankplus1"	    },	// 48
+		{ 0xDC770630, 0, 0, "CubeCell Plus Five"  	  ,	"cellplus5"   	},	// 49
 #endif		
-		{ 0x0       , 0, 0, "Name not available"  		,	"unknown"       },	// 48
+		{ 0x0       , 0, 0, "Name not available"  		,	"unknown"       },	// 50
 	};
   
   public:

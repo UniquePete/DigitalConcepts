@@ -1,6 +1,6 @@
 /*
     EepromHandler - Langlo EEPROM management
-    Version 0.0.15	18/04/2024
+    Version 0.0.16	22/05/2025
 
     0.0.1 Initial release
     0.0.2 Change setAddressingMode() to initSmartSerial()
@@ -21,9 +21,10 @@
 		       Set SmartSerial to true by default
 		0.0.14 Add PumpID and TankID to the list of stored values
 		0.0.15 Amend read() to return 0 on fail
+		0.0.16 Add bool isConnected() function to verify EEPROM accessibility
 		
     Digital Concepts
-    18 Apr 2024
+    22 May 2025
     digitalconcepts.net.au
    
     This is just a convenient way to keep all the information relating to EEPROM data storage
@@ -48,7 +49,7 @@ constexpr EepromHandler::EH_element EepromHandler::_element[];
   };
 #endif
 
-_SoftwareRevision _eepromHandlerRevNumber = {0,0,15};
+_SoftwareRevision _eepromHandlerRevNumber = {0,0,16};
 
 EepromHandler::EepromHandler() {
 }
@@ -57,6 +58,13 @@ String EepromHandler::softwareRevision() {
 	String _softwareRev;
 	_softwareRev = String(_eepromHandlerRevNumber.major) + "." + String(_eepromHandlerRevNumber.minor) + "." + String(_eepromHandlerRevNumber.minimus);
 	return _softwareRev;
+}
+
+bool EepromHandler::isConnected() {
+  _i2cBusPtr->beginTransmission(_i2cAddress);
+  if (_i2cBusPtr->endTransmission() == 0)
+    return (true);
+  return (false);
 }
 
 void EepromHandler::begin(TwoWire* _wirePtr) {
