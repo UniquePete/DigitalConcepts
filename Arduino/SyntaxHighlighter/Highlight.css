@@ -1,0 +1,165 @@
+/* Code syntax highlighting styles */
+
+pre.highlight {
+	margin: 0;
+	padding: 10px 10px;
+	background-color: #fff;
+}
+
+pre.line-numbers {
+	background-color: #f7f7f7;
+}
+
+.highlight code {
+	font-family: menlo;
+	font-size: 0.65rem;
+	color: #000;
+	background-color: transparent;
+}
+
+.highlight-code-table {
+	margin: 7px auto 0
+}
+
+.highlight-code-table pre {
+	overflow: visible;
+	tab-size: 2;
+}
+
+.highlight-code-heading {
+	height: 32px;
+	padding-top: 5px;
+	background-color: lightblue;
+}
+
+.highlight-code-title {
+	float: left;
+	padding-left: 10px;
+	padding-top: 4px;
+}
+
+.highlight-code-dlf {
+	float: right;
+	padding-top: 4px;
+	padding-right: 10px;
+}
+
+.highlight-code-table-container {
+	overflow-y: auto;
+	max-height: 500px;
+	border: 5px solid #eee;
+	background-color: #f7f7f7;
+}
+
+.highlight-code-sketch {
+	min-width: 540px;
+}
+
+table.highlight-code-extract {
+	width: 100%;
+	padding: 4px;
+	border: 1px solid #d0d0d0;
+	background-color: #f7f7f7;
+}
+
+table.highlight-lines {
+	margin: 2px;
+	border-collapse: collapse;
+	background-color: #fff;
+	min-width: 525px;
+}
+
+.highlight-lines tr:first-child td {
+	padding-top: 6px;
+}
+
+.highlight-lines tr:last-child td {
+	padding-bottom: 6px;
+}
+
+td.highlight-line-num {
+	text-align: right;
+	padding-left: 10px;
+	padding-right: 5px;
+	color: #a3a3a3;
+	background-color: #f7f7f7;
+	border-right: 1px solid #d0d0d0;
+}
+
+td.highlight-line-code {
+	padding-left: 10px;
+	padding-right: 10px;
+	min-width: 475px;
+}
+
+/* Arduino IDE highlights */
+
+.ide-keyword {
+	color: #2ba9ad;	/* aqua */
+}
+
+.ide-system-keyword {
+	color: #829930;	/* olive green */
+}
+
+.ide-platform-function {
+	color: #d46420;	/* orange */
+}
+
+.ide-platform-class {
+	color: #d35400;	/* orange */
+}
+
+.ide-string {
+	color: #048391; /* deep teal */
+}
+
+.ide-line-comment {
+	color: #b0b0b0; /* light grey */
+}
+
+.ide-block-comment {
+	color: #b0b0b0; /* light grey */
+}
+
+.ide-numeric {
+	color: #048391; /* deep teal */
+}
+
+.ide-literal {
+	color: #048391; /* deep teal */
+}
+
+/* HTML highlights */
+
+.html-line-comment {
+	color: #8b6fa8; /* light mauve */
+}
+
+.html-block-comment {
+	color: #8b6fa8; /* light mauve */
+}
+
+.html-special {
+	color: #ca2021; /* red */
+}
+
+.html-tag {
+	color: #3145f3; /* blue */
+}
+
+.html-hyperlink {
+	color: #1a6a2d; /* dark green */
+}
+
+.html-image {
+	color: #167f9f; /* teal */
+}
+
+.html-attribute {
+	color: #b3550e;	/* orange */
+}
+
+.html-attribute-value {
+	color: #c03376; /* deep pink */
+}
