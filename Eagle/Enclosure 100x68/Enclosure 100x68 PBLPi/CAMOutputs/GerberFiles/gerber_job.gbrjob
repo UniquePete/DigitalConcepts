@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2020-06-06T06:45:38Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.6.1"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "Enclosure 100x68"
+        },
+        "Owner": "Peter Harrison <autodesk@peteharrison.id.au>",
+        "Size": {
+            "X": 89.999734,
+            "Y": 57.9996
+        }
+    }
+}

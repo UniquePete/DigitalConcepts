@@ -1,0 +1,15 @@
+Partlist exported from /Users/pete/Documents/EAGLE/projects/LoRaBBPi/LoRaBBPi.sch at 2/05/2020 12:06 AM
+
+Qty Value               Device              Package             Parts                        Description                               POPULARITY SPICEPREFIX
+1   10K                 R-US_R0805          R0805               R1                           RESISTOR, American symbol                 85         R          
+1   10µF                CAPACITOR           C0805               C1                           0805 Capacitor                                                  
+3   1N4148              1N4148SMD           SOD-123             D1, D2, D3                   1N4148 SOD-123 Signal Diode                                     
+2   1X8-PIN-HEADER      1X8-PIN-HEADER      1X8                 H1, H2                       Single Row 8-Pin Header                                         
+1   1µF                 CAPACITOR           C0805               C2                           0805 Capacitor                                                  
+1   2X7-PIN-HEADER      2X7-PIN-HEADER      2X7                 PI                           Double Row 14-Pin Header                                        
+2   390                 R-US_R0805          R0805               R2, R3                       RESISTOR, American symbol                 85         R          
+1   CS                  LEDCHIP-LED0805     CHIP-LED0805        L1                           LED                                       68                    
+1   RFM95W-LORA         RFM95W-LORA         RFM95W-LORA         RFM95W                       RFM95W LoRa Wireless Transceiver                                
+6   SJ                  SJ                  SJ                  SJ1, SJ2, SJ3, SJ4, SJ5, SJ6 Solder Jumper                                                   
+1   Tx/Rx               LEDCHIP-LED0805     CHIP-LED0805        L2                           LED                                       68                    
+1   U.FL-SMA-EDGE-COMBO U.FL-SMA-EDGE-COMBO U.FL-SMA-EDGE-COMBO A1                           Combination u.FL & SMA edge mount antenna                       

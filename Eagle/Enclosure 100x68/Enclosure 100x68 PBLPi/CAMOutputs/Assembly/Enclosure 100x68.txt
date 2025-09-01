@@ -1,0 +1,4 @@
+Partlist exported from /Users/pete/Documents/EAGLE/projects/Enclosure 100x68/Enclosure 100x68.sch at 6/06/2020 4:45 PM
+
+Qty Value           Device          Package         Parts Description                                                                                                                                                               
+1   PROTO-34X22-BAT PROTO-34X22-BAT PROTO-34X22-BAT P1    34 x 22 Prototyping board, with battery connection (GND + Vcc plane), coupled side connection and Raspberry Pi Zero standoff mounting points, to fit a 100 x 68 enclosure 

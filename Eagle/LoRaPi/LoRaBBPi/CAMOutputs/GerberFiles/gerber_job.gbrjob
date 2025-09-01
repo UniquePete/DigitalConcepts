@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2020-05-01T14:06:09Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.6.1"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.5723,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "LoRaBBPi"
+        },
+        "Owner": "Peter Harrison <autodesk@peteharrison.id.au>",
+        "Size": {
+            "X": 25.4,
+            "Y": 33.274
+        }
+    }
+}
