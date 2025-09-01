@@ -18,9 +18,10 @@
     									"-", decimal point in floating point numbers and suffix qualifiers
     									(e.g. "f" for floating point numbers)
     250826	2.2.3		Add #if, #else & #elif to the ide-system-keyword list
+    250901	2.2.4		Correct handling of block comments when included inline
 		
     Digital Concepts
-    26 Aug 2025
+    01 Sep 2025
     digitalconcepts.net.au
 */
 
@@ -167,6 +168,7 @@ function formatArduinoCode(code,includeLineNumbers) {
 //        codeLines.push('');
 
 		let blockComment = false;
+		let inlineBlockComment = false;
 		let endBlockComment = false;
 		let lineStartsInBlockComment = false;
 		for (let i=0; i<codeLines.length; i++) {
@@ -188,10 +190,14 @@ function formatArduinoCode(code,includeLineNumbers) {
 
 						// Handle block comments
 						if (codeSegment.startsWith('/*')) {
-								blockComment = true;
+								if ( j == 0 ) {
+										blockComment = true;
+								} else {
+										inlineBlockComment = true;
+								}
 								if (!lineStartsInBlockComment) {
 										// Beginning of new block comment
-										if (includeLineNumbers) {
+										if (includeLineNumbers && blockComment) {
 											highlightedLine += lineNumberRowPrefix + lineNumber.toString() + lineNumberRowInfix + '<span class="'+blockCommentStyleClass+'">' + escapeHtml(codeSegment) + '</span>' + lineNumberRowSuffix;
 										} else {
 											highlightedLine += '<span class="'+blockCommentStyleClass+'">' + escapeHtml(codeSegment);
@@ -206,10 +212,11 @@ function formatArduinoCode(code,includeLineNumbers) {
 								}
 								if (codeSegment.endsWith('*/')) {
 										// End of block comment
-										if (!includeLineNumbers) {
+										if (!includeLineNumbers || inlineBlockComment) {
 											highlightedLine += '</span>'
 										}
 										lineStartsInBlockComment = false;
+										inlineBlockComment = false;
 										endBlockComment = true;
 								} else {
 										// This line didn't end the current block comment
