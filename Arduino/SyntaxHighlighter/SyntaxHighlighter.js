@@ -13,13 +13,14 @@
     								Remove unused functions, constants and variables
     250612	2.2.0		Modify function highlightHtmlCode to process multiple
     									<code language="language-HTML"> elements within a <pre> element
-    250706	2.2.1		Modify Arduino numeric sting match to exclude numerics preceded by "_"
-    250812	2.2.2		Modify Arduino numeric sting match to include qualifiers - preceding
+    250706	2.2.1		Modify Arduino numeric string match to exclude numerics preceded by "_"
+    250812	2.2.2		Modify Arduino numeric srting match to include qualifiers - preceding
     									"-", decimal point in floating point numbers and suffix qualifiers
     									(e.g. "f" for floating point numbers)
+    250826	2.2.3		Add #if, #else & #elif to the ide-system-keyword list
 		
     Digital Concepts
-    12 Aug 2025
+    26 Aug 2025
     digitalconcepts.net.au
 */
 
@@ -118,7 +119,7 @@ const arduinoKeywordStyles = [
 				styleClass: 'ide-keyword'
 		},
 		{
-				keywords: ['#include', '#define', '#ifdef', '#ifndef', '#endif', 'return', 'if', 'else', 'for', 'while', 'do',
+				keywords: ['#include', '#define', '#if', '#ifdef', '#ifndef', '#elif', '#else', '#endif', 'return', 'if', 'else', 'for', 'while', 'do',
 						'switch', 'case', 'default', 'break'],
 				styleClass: 'ide-system-keyword'
 		},
