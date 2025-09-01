@@ -11,9 +11,11 @@
     250606	2.1.0		Rename functions for consistency between and within highlighting
     									profiles
     								Remove unused functions, constants and variables
+    250612	2.2.0		Modify function highlightHtmlCode to process multiple
+    									<code language="language-HTML"> elements within a <pre> element
 		
     Digital Concepts
-    06 Jun 2025
+    12 Jun 2025
     digitalconcepts.net.au
 */
 
@@ -45,26 +47,38 @@ function highlightArduinoCode(preElement) {
 // Function to add [BBEdit] HTML syntax highlight styling
 
 function highlightHtmlCode(preElement) {
-		// Get the code element
-		const code = preElement.querySelector('code.language-HTML');
-		
-		if (code) {
-		
-				const lineNumbers = code.hasAttribute('data-line-numbers');
-				
-				// Get the current content
-				const originalContent = code.textContent;
-				
-				// Add syntax highlighting
-				const modifiedContent = formatHtmlCode(originalContent,lineNumbers);
-				
-				// Create a temporary div to parse the HTML
-				const tempDiv = document.createElement('div');
-				tempDiv.innerHTML = modifiedContent;
-				
-				// Update the code content with the parsed HTML
-				code.innerHTML = tempDiv.innerHTML;                
-		}
+
+    // Get all matching code elements
+    
+    // For HTML code highlighting, there could be sections within a block that
+    // are not HTML and thus do not want to be highlighted. Specifically, this
+    // applies to code content, being presented within an HTML block, that includes
+    // something like the "//" comment prefix. If the <code class="language-HTML"> block
+    // is not terminated before the inclusion of code (which should then be included
+    // within its own <code></code> block) that should be presented without any
+    // highlighting, and a new <code class="language-HTML"> block started afterwards, all
+    // within the one <pre> block, this content would be interpreted as an HTML comment
+    // and highlighted accordingly.
+    
+    const codes = preElement.querySelectorAll('code.language-HTML');
+
+    // Loop through each found code element and apply the highlighting
+    codes.forEach(code => {
+        const lineNumbers = code.hasAttribute('data-line-numbers');
+
+        // Get the current content
+        const originalContent = code.textContent;
+
+        // Add syntax highlighting
+        const modifiedContent = formatHtmlCode(originalContent, lineNumbers);
+
+        // Create a temporary div to parse the HTML
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = modifiedContent;
+
+        // Update the code content with the parsed HTML
+        code.innerHTML = tempDiv.innerHTML;
+    });
 }
 
 // Function to process all pre elements with Arduino code

@@ -13,6 +13,7 @@ pre.line-numbers {
 .highlight code {
 	font-family: menlo;
 	font-size: 0.65rem;
+	font-weight: normal;
 	color: #000;
 	background-color: transparent;
 }
@@ -52,7 +53,9 @@ pre.line-numbers {
 }
 
 .highlight-code-sketch {
-	min-width: 540px;
+	width:  100%;
+	border: 1px solid #cfcfcf;
+	padding: 4px;
 }
 
 table.highlight-code-extract {
@@ -115,11 +118,13 @@ td.highlight-line-code {
 }
 
 .ide-line-comment {
-	color: #b0b0b0; /* light grey */
+/*	color: #b0b0b0; /* light grey, but doesn't show on printed version */
+	color: #888; /* [darker] light grey */
 }
 
 .ide-block-comment {
-	color: #b0b0b0; /* light grey */
+/*	color: #b0b0b0; /* light grey */
+	color: #888;
 }
 
 .ide-numeric {
