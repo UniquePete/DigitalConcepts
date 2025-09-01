@@ -13,9 +13,10 @@
     								Remove unused functions, constants and variables
     250612	2.2.0		Modify function highlightHtmlCode to process multiple
     									<code language="language-HTML"> elements within a <pre> element
+    250706	2.2.1		Modify Arduino numeric sting match to exclude numerics preceded by "_"
 		
     Digital Concepts
-    12 Jun 2025
+    06 Jul 2025
     digitalconcepts.net.au
 */
 
@@ -495,7 +496,7 @@ function formatArduinoKeywords(codeLine) {
 				}
 		}
 		// Highlight numeric strings, including HEX
-		codeLine = codeLine.replace(new RegExp(/(?<![a-zA-Z0-9])0x[0-9a-fA-F]+(?![a-zA-Z0-9])|(?<![a-zA-Z0-9])[0-9]+(?![a-zA-Z0-9])/, 'g'), '<span class="'+numericStyleClass+'">$&</span>');
+		codeLine = codeLine.replace(new RegExp(/(?<![_a-zA-Z0-9])0x[0-9a-fA-F]+(?![a-zA-Z0-9])|(?<![_a-zA-Z0-9])[0-9]+(?![a-zA-Z0-9])/, 'g'), '<span class="'+numericStyleClass+'">$&</span>');
 		// Highlight class instances and their methods – the function avoids catching 'local' libraries that have had their "<" character escaped
 		codeLine = codeLine.replace(/(?<=\.)[a-zA-Z_$][a-zA-Z0-9_$]*|([a-zA-Z_$][a-zA-Z0-9_$]*)(?=[\.\(])/g,
 				function(match, p1, offset, string) {
