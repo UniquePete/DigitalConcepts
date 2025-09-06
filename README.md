@@ -6,7 +6,7 @@ At the moment, I've just dumped a lot of the project files here. I'll get things
 organised and documented in due course.
 
 ## Arduino
-Most of the material here is the sketches and libraries used in the projects described
+Most of the material here comprises the sketches and libraries used in the projects described
 on the project website identified above. More details to follow.
 
 The one, essentially stand-alone [JavaScript] application/script here is the syntax highlighter.
