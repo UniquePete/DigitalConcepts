@@ -38,5 +38,5 @@ More details to follow.
  
 ## Fritzing Parts
 These are the Fritzing part files, and the related breadboard images to assist in identification, that are
-described ont eh project website referenced above.
+described on the project website referenced above.
 More details to follow.
