@@ -11,9 +11,9 @@ on the project website identified above. More details to follow.
 
 The one, essentially stand-alone [JavaScript] application/script here is the syntax highlighter.
 This script is based on that developed by Indrek Luuk (see https://circuitjournal.com/syntax-highlighter).
-The present version is an in-line version that includes some additional syntax highlighting and optional
-line numbering. It requires the additional definition of appropriate CSS style definitions
-(see Highlight.css).
+The present version is an in-line version that includes some additional Arduino IDE syntax highlighting,
+basic HTML syntax highlighting and optional line numbering. It requires the additional definition of
+appropriate CSS style definitions (see Highlight.css).
 
 The script and CSS files need to be placed in appropriate directories and referenced in the Head section
 of the relevant HTML file:
