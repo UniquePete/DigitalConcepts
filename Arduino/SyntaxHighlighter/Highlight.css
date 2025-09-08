@@ -2,7 +2,6 @@
 
 pre.highlight {
 	margin: 0;
-	padding: 10px 10px;
 	background-color: #fff;
 }
 
@@ -55,7 +54,6 @@ pre.line-numbers {
 .highlight-code-sketch {
 	width:  100%;
 	border: 1px solid #cfcfcf;
-	padding: 4px;
 }
 
 table.highlight-code-extract {
