@@ -19,9 +19,10 @@
     									(e.g. "f" for floating point numbers)
     250826	2.2.3		Add #if, #else & #elif to the ide-system-keyword list
     250901	2.2.4		Correct handling of block comments when included inline
+    250908	2.2.5		Correct error in handling of hex numbers introduced at 2.2.2
 		
     Digital Concepts
-    01 Sep 2025
+    08 Sep 2025
     digitalconcepts.net.au
 */
 
@@ -508,9 +509,13 @@ function formatArduinoKeywords(codeLine) {
 		}
 		// Highlight numeric strings, including HEX
 		codeLine = codeLine.replace(
-				new RegExp(/(?<![_a-zA-Z0-9])-?0x[0-9a-fA-F]+(?![a-zA-Z0-9])|(?<![_a-zA-Z0-9])(-?(?:\d+\.?\d*|\.\d+))(?:([fFlL])(?![a-zA-Z0-9])|(?![a-zA-Z0-9]))/, 'g'),
-				function(match, p1, p2) {
-						return '<span class="' + numericStyleClass + '">' + p1 + '</span>' + (p2 || '');
+				new RegExp(/(?<![_a-zA-Z0-9])(-?0x[0-9a-fA-F]+)(?![a-zA-Z0-9])|(?<![_a-zA-Z0-9])(-?(?:\d+\.?\d*|\.\d+))(?:([fFlL])(?![a-zA-Z0-9])|(?![a-zA-Z0-9]))/, 'g'),
+				function(match, hexMatch, decimalMatch, suffix) {
+						if (hexMatch) {
+								return '<span class="' + numericStyleClass + '">' + hexMatch + '</span>';
+						} else {
+								return '<span class="' + numericStyleClass + '">' + decimalMatch + '</span>' + (suffix || '');
+						}
 				}
 		);
 		// Highlight class instances and their methods – the function avoids catching 'local' libraries that have had their "<" character escaped
