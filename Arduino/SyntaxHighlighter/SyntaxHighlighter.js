@@ -20,6 +20,7 @@
     250826	2.2.3		Add #if, #else & #elif to the ide-system-keyword list
     250901	2.2.4		Correct handling of block comments when included inline
     250908	2.2.5		Correct error in handling of hex numbers introduced at 2.2.2
+    								Correct error in handling HTML tag attributes without values
 		
     Digital Concepts
     08 Sep 2025
@@ -316,16 +317,23 @@ function formatHtmlTag(html) {
 						}
 							
 						// Split attributes using regex
-						const attrPattern = /([^\s=]+)="([^"]*)"/g;
+						const attrPattern = /([^\s=]+)(?:="([^"]*)")?/g;
 						let attrMatch;
 						
 						while ((attrMatch = attrPattern.exec(attributes)) !== null) {
-								// Add attribute and value
-								result += ` <span class="html-attribute">${escapeHtml(attrMatch[1])}=</span>`;
-								result += `<span class="html-attribute-value">"${escapeHtml(attrMatch[2])}"</span>`;
-						}
+								// Skip empty matches
+								if (!attrMatch[1]) continue;
+								
+								// Add attribute
+								result += ` <span class="html-attribute">${escapeHtml(attrMatch[1])}</span>`;
+								
+								// Add value if it exists
+								if (attrMatch[2] !== undefined) {
+										result += `=<span class="html-attribute-value">"${escapeHtml(attrMatch[2])}"</span>`;
+								}
+						}							
 							
-							// Add closing >
+						// Add closing >
             if (tagContent.substring(1,3) =="a ") {
 							result += `<span class="html-hyperlink">` + escapeHtml(">") + `</span>`;
             } else if (tagContent.substring(1,5) =="img ") {
